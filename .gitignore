@@ -354,4 +354,10 @@ MigrationBackup/
 node_modules
 ctf.rep
 capture.bag
+
+#ignore challenge zip files
 *.zip
+
+#ignore embedded repositories
+python-decompile3
+xcat
