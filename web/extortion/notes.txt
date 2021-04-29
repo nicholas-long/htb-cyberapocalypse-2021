@@ -1,0 +1,67 @@
+    React.createElement("p", null, "<br />
+<b>Warning</b>:  include(files//etc/passwd): failed to open stream: No such file or directory in <b>/var/www/html/index.php</b> on line <b>293</b><br />
+<br />
+<b>Warning</b>:  include(): Failed opening 'files//etc/passwd' for inclusion (include_path='.:/usr/local/lib/php') in <b>/var/www/html/index.php</b> on line <b>293</b><br />
+"), /*#__PURE__*/
+)));
+
+
+
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+
+APACHE_LOG_DIR:=/var/log/apache2$SUFFIX
+
+
+
+
+Start-Date: 2021-04-10  13:04:07
+Commandline: apt-get install -y --no-install-recommends autoconf dpkg-dev file g++ gcc libc-dev make pkg-config re2c ca-certificates curl xz-utils
+Install: libmpc3:amd64 (1.1.0-1, automatic), libmpx2:amd64 (8.3.0-6, automatic), libssh2-1:amd64 (1.8.0-2.1, automatic), libkrb5-3:amd64 (1.17-3+deb10u1, automatic), libgssapi-krb5-2:amd64 (1.17-3+deb10u1, automatic), libnghttp2-14:amd64 (1.36.0-2+deb10u1, automatic), libsasl2-modules-db:amd64 (2.1.27+dfsg-1+deb10u1, automatic), m4:amd64 (1.4.18-2, automatic), linux-libc-dev:amd64 (4.19.181-1, automatic), libcurl4:amd64 (7.64.0-4+deb10u2, automatic), libldap-2.4-2:amd64 (2.4.47+dfsg-3+deb10u6, automatic), libmpfr6:amd64 (4.0.2-1, automatic), openssl:amd64 (1.1.1d-0+deb10u6, automatic), libc6-dev:amd64 (2.28-10), re2c:amd64 (1.1.1-1), cpp-8:amd64 (8.3.0-6, automatic), libpsl5:amd64 (0.20.2-2, automatic), binutils:amd64 (2.31.1-16, automatic), cpp:amd64 (4:8.3.0-1, automatic), libitm1:amd64 (8.3.0-6, automatic), g++:amd64 (4:8.3.0-1), perl-modules-5.28:amd64 (5.28.1-6+deb10u1, automatic), gcc:amd64 (4:8.3.0-1), libk5crypto3:amd64 (1.17-3+deb10u1, automatic), libsasl2-2:amd64 (2.1.27+dfsg-1+deb10u1, automatic), libasan5:amd64 (8.3.0-6, automatic), libquadmath0:amd64 (8.3.0-6, automatic), libmagic1:amd64 (1:5.35-4+deb10u2, automatic), libisl19:amd64 (0.20-2, automatic), libperl5.28:amd64 (5.28.1-6+deb10u1, automatic), binutils-x86-64-linux-gnu:amd64 (2.31.1-16, automatic), autoconf:amd64 (2.69-11), libgcc-8-dev:amd64 (8.3.0-6, automatic), libtsan0:amd64 (8.3.0-6, automatic), librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2, automatic), libmagic-mgc:amd64 (1:5.35-4+deb10u2, automatic), libubsan1:amd64 (8.3.0-6, automatic), g++-8:amd64 (8.3.0-6, automatic), pkg-config:amd64 (0.29-6), libkrb5support0:amd64 (1.17-3+deb10u1, automatic), make:amd64 (4.2.1-1.2), libldap-common:amd64 (2.4.47+dfsg-3+deb10u6, automatic), libgdbm6:amd64 (1.18.1-4, automatic), gcc-8:amd64 (8.3.0-6, automatic), libkeyutils1:amd64 (1.6-6, automatic), xz-utils:amd64 (5.2.4-1), liblsan0:amd64 (8.3.0-6, automatic), libgomp1:amd64 (8.3.0-6, automatic), bzip2:amd64 (1.0.6-9.2~deb10u1, automatic), binutils-common:amd64 (2.31.1-16, automatic), libc-dev-bin:amd64 (2.28-10, automatic), file:amd64 (1:5.35-4+deb10u2), libbinutils:amd64 (2.31.1-16, automatic), ca-certificates:amd64 (20200601~deb10u2), perl:amd64 (5.28.1-6+deb10u1, automatic), libatomic1:amd64 (8.3.0-6, automatic), libssl1.1:amd64 (1.1.1d-0+deb10u6, automatic), libcc1-0:amd64 (8.3.0-6, automatic), libgdbm-compat4:amd64 (1.18.1-4, automatic), curl:amd64 (7.64.0-4+deb10u2), libdpkg-perl:amd64 (1.19.7, automatic), patch:amd64 (2.7.6-3+deb10u1, automatic), libglib2.0-0:amd64 (2.58.3-2+deb10u2, automatic), libstdc++-8-dev:amd64 (8.3.0-6, automatic), dpkg-dev:amd64 (1.19.7), libsigsegv2:amd64 (2.12-2, automatic)
+End-Date: 2021-04-10  13:04:17
+
+Start-Date: 2021-04-10  13:12:06
+Commandline: apt-get install -y --no-install-recommends apache2
+Install: libaprutil1:amd64 (1.6.1-4, automatic), libbrotli1:amd64 (1.0.7-2+deb10u1, automatic), libsqlite3-0:amd64 (3.27.2-3+deb10u1, automatic), libicu63:amd64 (63.1-6+deb10u1, automatic), libncurses6:amd64 (6.1+20181013-2+deb10u2, automatic), libaprutil1-dbd-sqlite3:amd64 (1.6.1-4, automatic), mime-support:amd64 (3.62, automatic), procps:amd64 (2:3.3.15-2, automatic), apache2-data:amd64 (2.4.38-3+deb10u4, automatic), libprocps7:amd64 (2:3.3.15-2, automatic), libexpat1:amd64 (2.2.6-2+deb10u1, automatic), libapr1:amd64 (1.6.5-1+b1, automatic), libaprutil1-ldap:amd64 (1.6.1-4, automatic), liblua5.2-0:amd64 (5.2.4-1.1+b2, automatic), libxml2:amd64 (2.9.4+dfsg1-7+deb10u1, automatic), apache2-bin:amd64 (2.4.38-3+deb10u4, automatic), lsb-base:amd64 (10.2019051400, automatic), libjansson4:amd64 (2.12-1, automatic), apache2:amd64 (2.4.38-3+deb10u4), apache2-utils:amd64 (2.4.38-3+deb10u4, automatic)
+End-Date: 2021-04-10  13:12:12
+
+Start-Date: 2021-04-10  13:38:51
+Commandline: apt-get install -y --no-install-recommends gnupg dirmngr
+Install: gnupg-utils:amd64 (2.2.12-1+deb10u1, automatic), gpg-wks-client:amd64 (2.2.12-1+deb10u1, automatic), gnupg-l10n:amd64 (2.2.12-1+deb10u1, automatic), libksba8:amd64 (1.3.5-2, automatic), gpg-wks-server:amd64 (2.2.12-1+deb10u1, automatic), gpg:amd64 (2.2.12-1+deb10u1, automatic), readline-common:amd64 (7.0-5, automatic), libassuan0:amd64 (2.5.2-1, automatic), dirmngr:amd64 (2.2.12-1+deb10u1), libreadline7:amd64 (7.0-5, automatic), gnupg:amd64 (2.2.12-1+deb10u1), pinentry-curses:amd64 (1.1.0-2, automatic), libnpth0:amd64 (1.6-1, automatic), gpg-agent:amd64 (2.2.12-1+deb10u1, automatic), gpgconf:amd64 (2.2.12-1+deb10u1, automatic), gpgsm:amd64 (2.2.12-1+deb10u1, automatic)
+End-Date: 2021-04-10  13:38:53
+
+Start-Date: 2021-04-10  13:38:57
+Commandline: apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+Purge: gnupg-utils:amd64 (2.2.12-1+deb10u1), gpg-wks-client:amd64 (2.2.12-1+deb10u1), gnupg-l10n:amd64 (2.2.12-1+deb10u1), libksba8:amd64 (1.3.5-2), gpg-wks-server:amd64 (2.2.12-1+deb10u1), gpg:amd64 (2.2.12-1+deb10u1), readline-common:amd64 (7.0-5), libassuan0:amd64 (2.5.2-1), dirmngr:amd64 (2.2.12-1+deb10u1), libreadline7:amd64 (7.0-5), gnupg:amd64 (2.2.12-1+deb10u1), pinentry-curses:amd64 (1.1.0-2), libnpth0:amd64 (1.6-1), gpg-agent:amd64 (2.2.12-1+deb10u1), gpgconf:amd64 (2.2.12-1+deb10u1), gpgsm:amd64 (2.2.12-1+deb10u1)
+End-Date: 2021-04-10  13:38:58
+
+Start-Date: 2021-04-10  13:39:06
+Commandline: apt-get install -y --no-install-recommends libargon2-dev libcurl4-openssl-dev libedit-dev libonig-dev libsodium-dev libsqlite3-dev libssl-dev libxml2-dev zlib1g-dev apache2-dev
+Install: libcroco3:amd64 (0.6.12-3, automatic), autotools-dev:amd64 (20180224.1, automatic), libsctp1:amd64 (1.0.18+dfsg-1, automatic), libldap2-dev:amd64 (2.4.47+dfsg-3+deb10u6, automatic), libbsd-dev:amd64 (0.9.1-2+deb10u1, automatic), intltool-debian:amd64 (0.35.0+20060710.5, automatic), libargon2-1:amd64 (0~20171227-0.2, automatic), libsqlite3-dev:amd64 (3.27.2-3+deb10u1), libarchive-zip-perl:amd64 (1.64-1, automatic), libexpat1-dev:amd64 (2.2.6-2+deb10u1, automatic), libelf1:amd64 (0.176-1.1, automatic), bsdmainutils:amd64 (11.1.2+b1, automatic), libbsd0:amd64 (0.9.1-2+deb10u1, automatic), dwz:amd64 (0.12-3, automatic), dh-autoreconf:amd64 (19, automatic), libonig-dev:amd64 (6.9.1-1), automake:amd64 (1:1.16.1-4, automatic), libedit-dev:amd64 (3.1-20181209-1), zlib1g-dev:amd64 (1:1.2.11.dfsg-1), libpipeline1:amd64 (1.5.1-2, automatic), dh-strip-nondeterminism:amd64 (1.1.2-1, automatic), libfile-stripnondeterminism-perl:amd64 (1.1.2-1, automatic), libsctp-dev:amd64 (1.0.18+dfsg-1, automatic), po-debconf:amd64 (1.0.21, automatic), groff-base:amd64 (1.22.4-3+deb10u1, automatic), man-db:amd64 (2.8.5-2, automatic), libcurl4-openssl-dev:amd64 (7.64.0-4+deb10u2), libxml2-dev:amd64 (2.9.4+dfsg1-7+deb10u1), libaprutil1-dev:amd64 (1.6.1-4, automatic), libssl-dev:amd64 (1.1.1d-0+deb10u6), uuid-dev:amd64 (2.33.1-0.1, automatic), debhelper:amd64 (12.1.1, automatic), libonig5:amd64 (6.9.1-1, automatic), libsodium23:amd64 (1.0.17-1, automatic), libuchardet0:amd64 (0.0.6-3, automatic), libapr1-dev:amd64 (1.6.5-1+b1, automatic), libncurses-dev:amd64 (6.1+20181013-2+deb10u2, automatic), libargon2-dev:amd64 (0~20171227-0.2), libedit2:amd64 (3.1-20181209-1, automatic), libicu-dev:amd64 (63.1-6+deb10u1, automatic), apache2-dev:amd64 (2.4.38-3+deb10u4), autopoint:amd64 (0.19.8.1-9, automatic), icu-devtools:amd64 (63.1-6+deb10u1, automatic), gettext-base:amd64 (0.19.8.1-9, automatic), gettext:amd64 (0.19.8.1-9, automatic), sensible-utils:amd64 (0.0.12, automatic), libtool:amd64 (2.4.6-9, automatic), libsodium-dev:amd64 (1.0.17-1)
+End-Date: 2021-04-10  13:39:12
+
+Start-Date: 2021-04-10  13:42:18
+Commandline: apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+Purge: libcroco3:amd64 (0.6.12-3), autotools-dev:amd64 (20180224.1), libsctp1:amd64 (1.0.18+dfsg-1), libldap2-dev:amd64 (2.4.47+dfsg-3+deb10u6), libbsd-dev:amd64 (0.9.1-2+deb10u1), intltool-debian:amd64 (0.35.0+20060710.5), libsqlite3-dev:amd64 (3.27.2-3+deb10u1), libarchive-zip-perl:amd64 (1.64-1), libexpat1-dev:amd64 (2.2.6-2+deb10u1), libelf1:amd64 (0.176-1.1), bsdmainutils:amd64 (11.1.2+b1), dwz:amd64 (0.12-3), dh-autoreconf:amd64 (19), libonig-dev:amd64 (6.9.1-1), automake:amd64 (1:1.16.1-4), libedit-dev:amd64 (3.1-20181209-1), zlib1g-dev:amd64 (1:1.2.11.dfsg-1), libpipeline1:amd64 (1.5.1-2), dh-strip-nondeterminism:amd64 (1.1.2-1), libfile-stripnondeterminism-perl:amd64 (1.1.2-1), libsctp-dev:amd64 (1.0.18+dfsg-1), po-debconf:amd64 (1.0.21), groff-base:amd64 (1.22.4-3+deb10u1), man-db:amd64 (2.8.5-2), libcurl4-openssl-dev:amd64 (7.64.0-4+deb10u2), libxml2-dev:amd64 (2.9.4+dfsg1-7+deb10u1), libaprutil1-dev:amd64 (1.6.1-4), libssl-dev:amd64 (1.1.1d-0+deb10u6), uuid-dev:amd64 (2.33.1-0.1), debhelper:amd64 (12.1.1), libuchardet0:amd64 (0.0.6-3), libapr1-dev:amd64 (1.6.5-1+b1), libncurses-dev:amd64 (6.1+20181013-2+deb10u2), libargon2-dev:amd64 (0~20171227-0.2), libicu-dev:amd64 (63.1-6+deb10u1), apache2-dev:amd64 (2.4.38-3+deb10u4), autopoint:amd64 (0.19.8.1-9), icu-devtools:amd64 (63.1-6+deb10u1), gettext-base:amd64 (0.19.8.1-9), gettext:amd64 (0.19.8.1-9), libtool:amd64 (2.4.6-9), libsodium-dev:amd64 (1.0.17-1)
+End-Date: 2021-04-10  13:42:20
+
+

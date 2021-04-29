@@ -1,0 +1,9 @@
+[package]
+name = "justbuildit"
+version = "0.0.1"
+
+[targets]
+main = "main.rs"
+
+[dependencies]
+rand = "0.8.3"

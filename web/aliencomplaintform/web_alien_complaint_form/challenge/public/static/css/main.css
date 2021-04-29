@@ -1,0 +1,346 @@
+@import 'https://fonts.googleapis.com/css?family=VT323';
+
+body {
+    text-transform: uppercase;
+    font-family: "VT323", monospace;
+}
+
+p {
+    font-size: 15px;
+    line-height: 16px;
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+    p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    p {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    p {
+        font-size: 2.1em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    p {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (min-width: 1336px) {
+    p {
+        font-size: 2.8em;
+    }
+}
+
+@media (min-width: 640px) {
+    p {
+        letter-spacing: 0.5em;
+    }
+}
+
+h1 {
+    font-size: 28px;
+}
+
+@media screen and (min-width: 480px) {
+    h1 {
+        font-size: 3.2em;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h1 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 6em;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    h1 {
+        font-size: 7em;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    h1 {
+        font-size: 8em;
+    }
+}
+
+@media screen and (min-width: 1025) {
+    h1 {
+        font-size: 9em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 10.25em;
+    }
+}
+
+h2 {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 480px) {
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h2 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    h2 {
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 5em;
+    }
+}
+
+h3 {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 480px) {
+    h3 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h3 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    h3 {
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    h3 {
+        font-size: 4.75em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    h3 {
+        font-size: 6em;
+    }
+}
+
+h4 {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 480px) {
+    h4 {
+        font-size: 1.275em;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    h4 {
+        font-size: 1.375em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    h4 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h4 {
+        font-size: 2.5em;
+    }
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 400;
+}
+
+/**********************************
+General
+***********************************/
+body {
+    color: #ABC0B7;
+    background: #080607;
+}
+
+.log-in {
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+.log-in:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.navbar-custom {
+    padding: 0.5rem;
+    background: #1a4f1a;
+    color: #54FE55;
+    border: 0;
+    text-shadow: 0px 0px 10px #54FE55;
+    box-shadow: 0px 0px 10px #1a4f1a;
+    cursor: pointer;
+    margin-bottom: 85px;
+}
+
+.logged-in-top {
+    position: flex;
+    border-top: 1px solid #ABC0B7;
+    border-right: 1px solid #ABC0B7;
+    border-left: 1px solid #ABC0B7;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.logged-in-top h1 {
+    margin-top: 10px;
+    transform: translateY(10%);
+}
+
+.logged-in-top h2 {
+    margin-top: 10px;
+    transform: translateY(10%);
+    letter-spacing: -3px;
+}
+
+.logged-in-middle {
+    margin: 40px 0;
+    border: 1px solid #ABC0B7;
+    padding: 35px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-content: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+}
+
+.system-item {
+    -ms-flex: 1 0 100%;
+    -webkit-flex: 1 0 100%;
+    flex: 1 0 100%;
+}
+
+@media (min-width: 640px) {
+    .system-item:first-child {
+        -ms-flex: 1 0 70%;
+        -webkit-flex: 1 0 70%;
+        flex: 1 0 70%;
+    }
+
+    .system-item:last-child {
+        -ms-flex: 1 0 30%;
+        -webkit-flex: 1 0 30%;
+        flex: 1 0 30%;
+        text-align: right;
+    }
+}
+
+.logged-in-bottom {
+    text-align: center;
+    padding: 0 40px 50px;
+    border-right: 1px solid #ABC0B7;
+    border-bottom: 1px solid #ABC0B7;
+    border-left: 1px solid #ABC0B7;
+    padding-top: 40px;
+}
+
+.logged-in-bottom textarea {
+    resize: none;
+    margin-top: 40px;
+    padding: 0 40px 50px;
+    background-color: #ABC0B7;
+    margin-bottom: 20px;
+    color: #000000;
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.logged-in-bottom button {
+    padding: 0.5rem;
+    width: 97%;
+    height: 5%;
+    background: #1a4f1a;
+    color: #54FE55;
+    border: 0;
+    text-shadow: 0px 0px 10px #54FE55;
+    box-shadow: 0px 0px 10px #1a4f1a;
+    cursor: pointer;
+}
+
+form button:focus {
+    outline: none;
+}
+
+i {
+    color: #D34156;
+    font-size: 50px;
+    margin: -7px -5px -5px;
+}
+
+table {
+    margin-top: 40px;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 25px;
+}

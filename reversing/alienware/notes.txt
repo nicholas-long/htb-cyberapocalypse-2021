@@ -1,0 +1,169 @@
+get env var OS = Windows_NT
+
+XOR it with this:
+.rdata:0000000140003280 byte_140003280  db 78h                  ; DATA XREF: load_dll_get_decrypt_func+9A↑o
+.rdata:0000000140003280                                         ; sub_140001240+81↑r ...
+.rdata:0000000140003281 byte_140003281  db 2                    ; DATA XREF: sub_140001240+9A↑r
+.rdata:0000000140003281                                         ; sub_140001240+1C4↑r
+.rdata:0000000140003282 byte_140003282  db 76h                  ; DATA XREF: sub_140001240+B3↑r
+.rdata:0000000140003282                                         ; sub_140001240+1DF↑r
+.rdata:0000000140003283 byte_140003283  db 80h                  ; DATA XREF: sub_140001240+CC↑r
+.rdata:0000000140003283                                         ; sub_140001240+1FB↑r
+.rdata:0000000140003284 byte_140003284  db 0F5h                 ; DATA XREF: sub_140001240+E5↑r
+.rdata:0000000140003285 byte_140003285  db 44h                  ; DATA XREF: sub_140001240+FE↑r
+.rdata:0000000140003286 byte_140003286  db 0AAh                 ; DATA XREF: sub_140001240+117↑r
+.rdata:0000000140003287 byte_140003287  db 98h                  ; DATA XREF: sub_140001240+130↑r
+.rdata:0000000140003288 byte_140003288  db 0EEh                 ; DATA XREF: sub_140001240+149↑r
+.rdata:0000000140003289 byte_140003289  db 65h                  ; DATA XREF: sub_140001240+162↑r
+.rdata:000000014000328A byte_14000328A  db 11h                  ; DATA XREF: sub_140001240+17B↑r
+.rdata:000000014000328B byte_14000328B  db 76h                  ; DATA XREF: sub_140001240+194↑r
+
+
+so call the dll with this data:
+Stack[00001110]:000000000012F6E0 db  2Fh ; /
+Stack[00001110]:000000000012F6E1 db  6Bh ; k
+Stack[00001110]:000000000012F6E2 db  18h
+Stack[00001110]:000000000012F6E3 db 0E4h ; ä
+Stack[00001110]:000000000012F6E4 db  9Ah ; š
+Stack[00001110]:000000000012F6E5 db  33h ; 3
+Stack[00001110]:000000000012F6E6 db 0D9h ; Ù
+Stack[00001110]:000000000012F6E7 db 0C7h ; Ç
+Stack[00001110]:000000000012F6E8 db 0A0h ;  
+Stack[00001110]:000000000012F6E9 db  31h ; 1
+Stack[00001110]:000000000012F6EA db  46h ; F
+Stack[00001110]:000000000012F6EB db  1Fh
+Stack[00001110]:000000000012F6EC db  16h
+Stack[00001110]:000000000012F6ED db  66h ; f
+Stack[00001110]:000000000012F6EE db  19h
+Stack[00001110]:000000000012F6EF db    0
+Stack[00001110]:000000000012F6F0 db    0
+Stack[00001110]:000000000012F6F1 db    0
+Stack[00001110]:000000000012F6F2 db    4
+Stack[00001110]:000000000012F6F3 db 0FFh ; ÿ
+Stack[00001110]:000000000012F6F4 db    0
+Stack[00001110]:000000000012F6F5 db    0
+Stack[00001110]:000000000012F6F6 db    0
+Stack[00001110]:000000000012F6F7 db    0
+
+convert that data to multibyte
+use strlenw to get the length
+
+hash it with sha256
+derive key from that hash
+
+
+Microsoft Enhanced RSA and AES Cryptographic Provider
+
+
+
+
+__int64 __fastcall crypt_stuff(LPCWSTR lpFileName, LPCWSTR a2, char *Source)
+{
+  const WCHAR *v3; // rbx
+  const WCHAR *v4; // rdi
+  int v5; // er15
+  HANDLE v6; // r14
+  HANDLE v7; // rsi
+  DWORD v8; // ebx
+  BOOL v10; // ebx
+  int v11; // edi
+  DWORD i; // er15
+  DWORD NumberOfBytesRead; // [rsp+40h] [rbp-C0h]
+  HCRYPTPROV phProv; // [rsp+48h] [rbp-B8h]
+  DWORD NumberOfBytesWritten; // [rsp+50h] [rbp-B0h]
+  HCRYPTHASH phHash; // [rsp+58h] [rbp-A8h]
+  HCRYPTKEY phKey; // [rsp+60h] [rbp-A0h]
+  __int64 Buffer; // [rsp+68h] [rbp-98h]
+  __int64 v19; // [rsp+70h] [rbp-90h]
+  __int64 v20; // [rsp+78h] [rbp-88h]
+  __int64 v21; // [rsp+80h] [rbp-80h]
+  __int64 v22; // [rsp+88h] [rbp-78h]
+  __int64 v23; // [rsp+90h] [rbp-70h]
+  wchar_t Dest[4]; // [rsp+98h] [rbp-68h]
+  __int64 v25; // [rsp+A0h] [rbp-60h]
+  __int64 v26; // [rsp+A8h] [rbp-58h]
+  __int64 v27; // [rsp+B0h] [rbp-50h]
+  __int16 v28; // [rsp+B8h] [rbp-48h]
+  WCHAR szProvider[8]; // [rsp+C0h] [rbp-40h]
+  __int128 v30; // [rsp+D0h] [rbp-30h]
+  __int128 v31; // [rsp+E0h] [rbp-20h]
+  __int128 v32; // [rsp+F0h] [rbp-10h]
+  __int128 v33; // [rsp+100h] [rbp+0h]
+  __int128 v34; // [rsp+110h] [rbp+10h]
+  __int64 v35; // [rsp+120h] [rbp+20h]
+  int v36; // [rsp+128h] [rbp+28h]
+
+  v3 = lpFileName;
+  v4 = a2;
+  *(_QWORD *)Dest = 0i64;
+  v25 = 0i64;
+  v26 = 0i64;
+  v27 = 0i64;
+  v28 = 0;
+  mbstowcs(Dest, Source, 0x10ui64);
+  v5 = lstrlenW(Dest);
+  v6 = CreateFileW(v3, 0x80000000, 1u, 0i64, 3u, 0x8000000u, 0i64);
+  if ( v6 == (HANDLE)-1i64 )
+    return 0xFFFFFFFFi64;
+  v7 = CreateFileW(v4, 0x40000000u, 0, 0i64, 2u, 0x80u, 0i64);
+  if ( v7 == (HANDLE)-1i64 )
+    return 0xFFFFFFFFi64;
+  *(_OWORD *)szProvider = *(_OWORD *)L"Microsoft Enhanced RSA and AES Cryptographic Provider";
+  v31 = *(_OWORD *)L"ed RSA and AES Cryptographic Provider";
+  v30 = *(_OWORD *)L"t Enhanced RSA and AES Cryptographic Provider";
+  v33 = *(_OWORD *)L"ryptographic Provider";
+  v32 = *(_OWORD *)L"nd AES Cryptographic Provider";
+  v35 = *(_QWORD *)L"vider";
+  v34 = *(_OWORD *)L"phic Provider";
+  v36 = *(_DWORD *)L"r";
+  if ( !CryptAcquireContextW(&phProv, 0i64, szProvider, 0x18u, 0xF0000000)
+    || !CryptCreateHash(phProv, 0x800Cu, 0i64, 0, &phHash) )// sha256
+  {
+    goto LABEL_21;
+  }
+  if ( !CryptHashData(phHash, (const BYTE *)Dest, v5, 0) )
+  {
+    GetLastError();
+    return 0xFFFFFFFFi64;
+  }
+  if ( !CryptDeriveKey(phProv, 0x660Eu, phHash, 0, &phKey) )
+  {
+LABEL_21:
+    v8 = GetLastError();
+    CryptReleaseContext(phProv, 0);
+    return v8;
+  }
+  NumberOfBytesRead = 0;
+  Buffer = 0i64;
+  v19 = 0i64;
+  v20 = 0i64;
+  v10 = 0;
+  v21 = 0i64;
+  v11 = 0;
+  v22 = 0i64;
+  v23 = 0i64;
+  for ( i = GetFileSize(v6, 0i64); ReadFile(v6, &Buffer, 0x30u, &NumberOfBytesRead, 0i64); v23 = 0i64 )
+  {
+    if ( !NumberOfBytesRead )
+      break;
+    v11 += NumberOfBytesRead;
+    if ( v11 == i )
+      v10 = 1;
+    if ( !CryptEncrypt(phKey, 0i64, v10, 0, (BYTE *)&Buffer, &NumberOfBytesRead, 0x30u) )
+      break;
+    NumberOfBytesWritten = 0;
+    if ( !WriteFile(v7, &Buffer, NumberOfBytesRead, &NumberOfBytesWritten, 0i64) )
+      break;
+    Buffer = 0i64;
+    v19 = 0i64;
+    v20 = 0i64;
+    v21 = 0i64;
+    v22 = 0i64;
+  }
+  CryptReleaseContext(phProv, 0);
+  CryptDestroyKey(phKey);
+  CryptDestroyHash(phHash);
+  CloseHandle(v6);
+  CloseHandle(v7);
+  return 1i64;
+}

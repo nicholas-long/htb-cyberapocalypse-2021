@@ -1,0 +1,28 @@
+http://162.222.183.14:1337/
+http://162.222.183.14:1338/
+http://162.222.183.14:1339/
+http://162.222.183.14:2000/
+Role name: pdfme-role@essential-hawk-310212.iam.gserviceaccount.com 
+
+
+
+
+
+http://52.55.153.92:4444/index.html
+
+
+https://iamcredentials.googleapis.com/v1/{name=projects/*/serviceAccounts/*}:generateIdToken
+
+
+https://iam.googleapis.com/projects/pdfme/serviceAccounts/pdfme-role@essential-hawk-310212.iam.gserviceaccount.com
+
+https://iam.googleapis.com/v1/serviceAccounts/pdfme-role@essential-hawk-310212.iam.gserviceaccount.com/keys
+/etc/nginx/nginx.conf
+
+
+root:x:0:0:root:/root:/bin/ashbin:x:1:1:bin:/bin:/sbin/nologindaemon:x:2:2:daemon:/sbin:/sbin/nologinadm:x:3:4:adm:/var/adm:/sbin/nologinlp:x:4:7:lp:/var/spool/lpd:/sbin/nologinsync:x:5:0:sync:/sbin:/bin/syncshutdown:x:6:0:shutdown:/sbin:/sbin/shutdownhalt:x:7:0:halt:/sbin:/sbin/haltmail:x:8:12:mail:/var/mail:/sbin/nologinnews:x:9:13:news:/usr/lib/news:/sbin/nologinuucp:x:10:14:uucp:/var/spool/uucppublic:/sbin/nologinoperator:x:11:0:operator:/root:/sbin/nologinman:x:13:15:man:/usr/man:/sbin/nologinpostmaster:x:14:12:postmaster:/var/mail:/sbin/nologincron:x:16:16:cron:/var/spool/cron:/sbin/nologinftp:x:21:21::/var/lib/ftp:/sbin/nologinsshd:x:22:22:sshd:/dev/null:/sbin/nologinat:x:25:25:at:/var/spool/cron/atjobs:/sbin/nologinsquid:x:31:31:Squid:/var/cache/squid:/sbin/nologinxfs:x:33:33:X Font Server:/etc/X11/fs:/sbin/nologingames:x:35:35:games:/usr/games:/sbin/nologincyrus:x:85:12::/usr/cyrus:/sbin/nologinvpopmail:x:89:89::/var/vpopmail:/sbin/nologinntp:x:123:123:NTP:/var/empty:/sbin/nologinsmmsp:x:209:209:smmsp:/var/spool/mqueue:/sbin/nologinguest:x:405:100:guest:/dev/null:/sbin/nologinnobody:x:65534:65534:nobody:/:/sbin/nologinutmp:x:100:406:utmp:/home/utmp:/bin/falsewww:x:1000:1000:1000:/home/www:/bin/shnginx:x:101:101:nginx:/var/lib/nginx:/sbin/nologinuwsgi:x:102:102:uwsgi:/dev/null:/sbin/nolog
+
+
+nginx conf
+user www;pid /run/nginx.pid;error_log /dev/stderr info;events {    worker_connections 1024;}http {    server_tokens off;    log_format docker '$remote_addr $remote_user $status "$request""$http_referer" "$http_user_agent" ';    access_log /dev/stdout docker;    charset utf-8;    keepalive_timeout 20s;    sendfile on;    tcp_nopush on;    client_max_body_size 1M;    include  /etc/nginx/mime.types;    server {        listen 80;        server_name _;        location / {            try_files $uri @app;        }        location @app {            include uwsgi_params;            uwsgi_pass unix:///tmp/uwsgi.sock;        }        location /static {            alias /app/application/static;        }            }}
+

